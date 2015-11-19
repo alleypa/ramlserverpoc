@@ -1,0 +1,67 @@
+{
+  "rules": {
+    "indent": [
+      2,
+      2
+    ],
+    "quotes": [
+      2,
+      "single"
+    ],
+    "linebreak-style": [
+      2,
+      "unix"
+    ],
+    "semi": [
+      2,
+      "always"
+    ],
+    "global-strict": [
+      2,
+      "never"
+    ],
+    "strict": [
+      2,
+      "never"
+    ],
+    "no-unused-expressions": 0,
+    "no-cond-assign": [
+      2,
+      "always"
+    ],
+    "max-params": [
+      1,
+      7
+    ],
+    "max-depth": [
+      1,
+      4
+    ],
+    // Max indentation depth
+    "max-len": [
+      1,
+      125,
+      2
+    ],
+    // Max line length
+    "no-eval": 1,
+    "no-else-return": 1,
+    "no-extend-native": 1,
+    "no-fallthrough": 1,
+    "no-lone-blocks": 1,
+    "no-multi-spaces": 1,
+    "radix": 0,
+    "space-in-brackets": 0,
+    "space-before-function-paren": [
+      2,
+      {
+        "anonymous": "never",
+        "named": "never"
+      }
+    ]
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  }
+}
