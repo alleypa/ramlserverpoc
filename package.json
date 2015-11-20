@@ -4,12 +4,24 @@
   "description": "CCS UI Raml Mock Server ",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js localhost 8888"
   },
   "repository": {
     "type": "git",
-    "url": "git"
+    "url": "We are yet to have a remote repo for you"
   },
   "author": "Olu Alli",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  },
+  "dependencies": {
+    "fs": "0.0.2",
+    "http-status-codes": "^1.0.5",
+    "lodash": "^3.10.1",
+    "morgan": "^1.6.1",
+    "node-yaml-config": "0.0.3",
+    "path": "^0.12.7",
+    "raml-server": "^0.1.5"
+  }
 }
