@@ -4,7 +4,7 @@
   "description": "CCS UI Raml Mock Server ",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js localhost 8888"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -16,12 +16,13 @@
     "nodemon": "^1.8.1"
   },
   "dependencies": {
+    "express": "^4.13.3",
     "fs": "0.0.2",
     "http-status-codes": "^1.0.5",
     "lodash": "^3.10.1",
     "morgan": "^1.6.1",
     "node-yaml-config": "0.0.3",
     "path": "^0.12.7",
-    "raml-server": "^0.1.5"
+    "raml-mocker-server": "^0.1.3"
   }
 }
