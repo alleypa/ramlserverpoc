@@ -1,0 +1,34 @@
+[
+  {
+    "hearingName": "hearingName",
+    "hearingKey": "key123",
+    "hearingCase": "1",
+    "hearingType": "Trial",
+    "startDate": "16-11-2015",
+    "trialEstimate": 1.0,
+    "bookingType": "Provisional",
+    "bookingStatus": "Unscheduled",
+    "startDateForSlot": "16-11-2015",
+    "active": true,
+    "courtRoomName": "room1",
+    "hearingNote": "hearingNote",
+    "hearingStatus": "Pending",
+    "trialKPIDate": "16-11-2016"
+  },
+  {
+    "hearingName": "hearingName",
+    "hearingKey": "key123",
+    "hearingCase": "1",
+    "hearingType": "Trial",
+    "startDate": "16-11-2015",
+    "trialEstimate": 1.0,
+    "bookingType": "Provisional",
+    "bookingStatus": "Unscheduled",
+    "startDateForSlot": "16-11-2015",
+    "active": true,
+    "courtRoomName": "room1",
+    "hearingNote": "hearingNote",
+    "hearingStatus": "Pending",
+    "trialKPIDate": "16-11-2016"
+  }
+]

@@ -4,7 +4,8 @@
   "description": "CCS UI Raml Mock Server ",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node_modules/.bin/nodemon server.js",
+    "test": ""
   },
   "repository": {
     "type": "git",
@@ -13,9 +14,13 @@
   "author": "Olu Alli",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^1.8.1"
+    "nodemon": "^1.8.1",
+    "q": "^1.4.1",
+    "ramllint": "^1.2.2"
   },
   "dependencies": {
+    "body-parser": "^1.14.1",
+    "compression": "^1.6.0",
     "express": "^4.13.3",
     "fs": "0.0.2",
     "http-status-codes": "^1.0.5",
@@ -23,6 +28,7 @@
     "morgan": "^1.6.1",
     "node-yaml-config": "0.0.3",
     "path": "^0.12.7",
-    "raml-mocker-server": "^0.1.3"
+    "raml-mocker-server": "^0.1.3",
+    "raml-server": "^0.1.5"
   }
 }
