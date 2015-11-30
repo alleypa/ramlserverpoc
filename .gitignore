@@ -3,9 +3,6 @@
 cppapi/
 
 
-cppapi - Copy/
-
-
 # Node Specifics
 node_modules
 npm-debug.*
