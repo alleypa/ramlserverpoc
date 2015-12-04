@@ -4,7 +4,7 @@
   "description": "CCS UI Raml Mock Server ",
   "main": "server.js",
   "scripts": {
-    "start": "node_modules/.bin/nodemon server.js",
+    "start": "node_modules/.bin/nodemon serverOS.js",
     "test": ""
   },
   "repository": {
@@ -15,7 +15,9 @@
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^1.8.1",
+    "osprey": "^0.2.0-beta.9",
     "q": "^1.4.1",
+    "raml-mocker-server": "^0.1.4",
     "ramllint": "^1.2.2"
   },
   "dependencies": {

@@ -9,14 +9,16 @@ ramllint = require('ramllint');
 module.exports = function (app, server, options) {
 
     options.app = app;
-    options.prefix = '/ccs-cst-read';
-    options.path = path.normalize(path.resolve(options.path, 'hearing/read'));
+    //options.prefix = '/ccs-cst-read';
+    options.prioritizeBy = 'example';
 
-    //var linter = new ramllint({ url_lower: false });
-    //linter.lint(options.path + '/hearing-cst-read.raml', function (results) {
-    //    console.log('Lint results');
-    //    console.dir(results);
-    //});
+    var linter = new ramllint({ url_lower: false });    
+    var ramlPath = path.normalize(path.join(path.resolve(options.path), '/scheduling.raml'));
+    //console.log(ramlPath);
+    linter.lint(ramlPath, function (results) {
+        console.log('Lint results');
+        console.dir(results);
+    });
 
     var serverRead = server(options, readCallback);
 
