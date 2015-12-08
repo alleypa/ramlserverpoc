@@ -14,41 +14,26 @@ module.exports = function () {
 
     function read(fileName) {
 
-        var readFile = q.denodeify(fs.readFile);
+        var readFile = q.denodeify(fs.readFile),
+            deferred = q.defer();
 
-        return readFile(fileName)
+        readFile(fileName)
             .then(sucess)
-            .catch(function (error) {
-                console.log('Something went wrong while opening ' + fileName + ' ' + error.message);
-            });
+            .catch(failed);
 
         function sucess(data) {
-            return JSON.parse(data);
+            //return _.attempt(JSON.parse.bind(null, data));
+
+            return deferred.resolve(JSON.parse(data));
         }
+
+        function failed (error) {
+            return deferred.reject('Something went wrong while opening ' + fileName + ' ' + error.message);
+        }
+
+        return deferred.promise;
     };
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

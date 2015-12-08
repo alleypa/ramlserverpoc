@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-var app = require('express')(),    
+var app = require('express')(),
     bodyParser = require('body-parser'),
     errorHandler = require('./utils/error-handler.js')(),
     fs = require('fs'),
@@ -21,7 +21,14 @@ var ramlPath = path.normalize(path.join(__dirname, config.scheduling.path, 'sche
 var router = osprey.Router();
 
 //console.dir(osprey);
-osprey.loadFile(ramlPath).then(function (middleware) {
+var options = {
+    server: {
+        cors: true,
+        compression: true
+    }
+};
+
+osprey.loadFile(ramlPath, options).then(function (middleware) {
 
     app.use(bodyParser.urlencoded({ extended: true })); // application/x-www-form-urlencoded
     app.use(bodyParser.json()); // application/json
