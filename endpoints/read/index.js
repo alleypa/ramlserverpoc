@@ -9,6 +9,7 @@ module.exports = function (osprey, options) {
     osprey.loadFile(readRaml, options).then(function (middleware) {
 
         app.use('', middleware, router);
+        
 
         require('./hearing/hearing.js')(router);        
     });

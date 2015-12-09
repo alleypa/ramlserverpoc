@@ -1,7 +1,7 @@
 ﻿'use strict';
 
 var fs = require('fs'),
-    q = require('q');
+    Q = require('q');
 
 module.exports = function () {
 
@@ -14,21 +14,19 @@ module.exports = function () {
 
     function read(fileName) {
 
-        var readFile = q.denodeify(fs.readFile),
-            deferred = q.defer();
+        var readFile = Q.denodeify(fs.readFile),
+            deferred = Q.defer();
 
-        readFile(fileName)
-            .then(sucess)
-            .catch(failed);
+        readFile(fileName).then(sucess).catch(failed);
 
         function sucess(data) {
             //return _.attempt(JSON.parse.bind(null, data));
 
-            return deferred.resolve(JSON.parse(data));
+            deferred.resolve(JSON.parse(data));
         }
 
         function failed (error) {
-            return deferred.reject('Something went wrong while opening ' + fileName + ' ' + error.message);
+            deferred.reject('Something went wrong while opening ' + fileName + ' ' + error.message);
         }
 
         return deferred.promise;

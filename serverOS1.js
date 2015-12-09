@@ -1,7 +1,6 @@
 ﻿'use strict';
 
 var app = require('express')(),
-    bodyParser = require('body-parser'),
     errorHandler = require('./utils/error-handler.js')(),
     fs = require('fs'),
     host = 'http://localhost:' || '', // TODO: make dynamic
@@ -18,12 +17,6 @@ if (!fs.existsSync(ramlDir)) {
     throw new Error('Project path ' + config.scheduling.path + ' does not exist');
 }
 
-app.use(bodyParser.urlencoded({ extended: true })); // application/x-www-form-urlencoded
-app.use(bodyParser.json()); // application/json
-app.use(logger('dev'));
-//app.use(osprey.server.notFoundHandler)
-app.use(errorHandler.init);
-
 var options = {
     app: app,
     dir: ramlDir,
@@ -38,6 +31,9 @@ var options = {
 require('./endpoints/read')(osprey, options);
 require('./endpoints/write')(osprey, options);
 
+app.use(logger('dev'));
+app.use(errorHandler.init);
+//app.use(osprey.server.notFoundHandler);
 
 app.listen(config.scheduling.port, function () {
     console.log('The CSSAPI Raml mock server is running at ' + host + config.scheduling.port);
