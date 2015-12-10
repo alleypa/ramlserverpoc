@@ -37,6 +37,7 @@ Q.all([
 .then(function (middlewares) {
     app.use(middlewares[0], middlewares[1], router);
     //app.use(mountMiddlewares(middlewares), router);
+
     app.use(logger('dev'));
     app.use(errorHandler.init);
     app.use(osprey.server.notFoundHandler);
