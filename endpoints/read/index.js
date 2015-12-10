@@ -1,16 +1,21 @@
 ﻿'use strict';
 
-module.exports = function (osprey, options) {
+module.exports = function (router) {
 
-    var readRaml = require('path').normalize(options.dir + '/ccs-cst-read.raml');
-    var app = options.app;
-    var router = osprey.Router();
+    //var readRaml = require('path').normalize(options.dir + '/ccs-cst-read.raml');
+    //var app = options.app;
+    //var router = osprey.Router();
 
-    osprey.loadFile(readRaml, options).then(function (middleware) {
+    //osprey.loadFile(readRaml, options).then(function (middleware) {
 
-        app.use('', middleware, router);
+    //    app.use('', middleware, router);
         
 
-        require('./hearing/hearing.js')(router);        
-    });
+    //    require('./hearing/hearing.js')(router);        
+    //});
+
+    return {
+        hearing: require('./hearing/hearing.js')(router)
+    }
+
 };

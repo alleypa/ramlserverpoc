@@ -4,9 +4,9 @@
   "description": "CCS UI Raml Mock Server ",
   "main": "server.js",
   "scripts": {
-    "start": "node_modules/.bin/nodemon serverOS1.js",
+    "start": "node_modules/.bin/nodemon serverOS2.js",
     "test": "",
-    "debug": "node_modules/.bin/node-debug serverOS1.js --no-preload"
+    "debug": "node_modules/.bin/node-debug serverOS2.js --no-preload"
   },
   "repository": {
     "type": "git",
