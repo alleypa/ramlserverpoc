@@ -16,6 +16,6 @@ module.exports = function (router) {
 
     return {
         hearing: require('./hearing/hearing.js')(router)
-    }
+    };
 
 };

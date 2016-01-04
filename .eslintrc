@@ -1,29 +1,19 @@
 {
   "rules": {
-    "indent": [
-      2,
-      2
-    ],
+    "indent": [2, 4],
     "quotes": [
       2,
       "single"
     ],
     "linebreak-style": [
       2,
-      "unix"
+      "windows"
     ],
     "semi": [
       2,
       "always"
     ],
-    "global-strict": [
-      2,
-      "never"
-    ],
-    "strict": [
-      2,
-      "never"
-    ],
+    "strict": [2, "global"],
     "no-unused-expressions": 0,
     "no-cond-assign": [
       2,
@@ -55,7 +45,7 @@
     "space-before-function-paren": [
       2,
       {
-        "anonymous": "never",
+        "anonymous": "always",
         "named": "never"
       }
     ]

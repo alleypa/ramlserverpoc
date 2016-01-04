@@ -1,4 +1,6 @@
-﻿module.exports = function () {
+﻿'use strict';
+
+module.exports = function () {
     var service = {
         init: init,
         logErrors: logErrors

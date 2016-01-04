@@ -1,5 +1,6 @@
 Create cppapi as a git submodule
 - git submodule add -f ssh://olua.dv2@coderepo.dev2.cloud.local:29418/cppapi.git cppapi.
+- git submodule add -f ssh://olua.dv2@coderepo.dev2.cloud.local:29418/cppapi && scp -p -P 29418 olua.dv2@coderepo.dev2.cloud.local:hooks/commit-msg cppapi/.git/hooks/ 
 - git submodule update --init --recursive
 
 Preferably anonymous access to the Gerrit repo

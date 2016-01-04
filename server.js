@@ -28,7 +28,7 @@ var options = {
     port: config.scheduling.port,
     path: config.scheduling.path,
     watch: true
-}
+};
 
 // load all endpoints
 require('./endpoints/hearing')(app, ramlServer, options);

@@ -1,10 +1,10 @@
 ﻿'use strict';   
 
 var fs = require('fs'),
-HttpStatus = require('http-status-codes'),
-JsonReader = require(process.cwd() + '/utils/json-reader.js')(),
-path = require('path'),
-ramllint = require('ramllint');
+    HttpStatus = require('http-status-codes'),
+    JsonReader = require(process.cwd() + '/utils/json-reader.js')(),
+    path = require('path'),
+    ramllint = require('ramllint');
 
 module.exports = function (app, server, options) {
 
@@ -22,7 +22,7 @@ module.exports = function (app, server, options) {
 
     var serverRead = server(options, readCallback);
 
-    function readCallback (app) {
+    function readCallback(app) {
         console.log('Get hearing...');
 
         //'/ccs_cst_read/cpp/cst-read/

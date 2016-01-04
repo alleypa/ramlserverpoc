@@ -25,7 +25,7 @@ module.exports = function () {
             deferred.resolve(JSON.parse(data));
         }
 
-        function failed (error) {
+        function failed(error) {
             deferred.reject('Something went wrong while opening ' + fileName + ' ' + error.message);
         }
 
